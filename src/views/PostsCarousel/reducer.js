@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
+import Immutable from 'seamless-immutable';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+
 import { REQUEST_POSTS, RECEIVE_POSTS } from './action';
 
 export const postPropType = PropTypes.shape({
@@ -21,6 +23,11 @@ export const postPropType = PropTypes.shape({
   }).isRequired,
   date: PropTypes.string.isRequired, //TO DO : date validation => class Date
   // TO DO : proptype for image src
+});
+
+export const INITIAL_STATE = Immutable({
+  items: [],
+  isFetching: 0,
 });
 
 const items = (state = [], action) => {
