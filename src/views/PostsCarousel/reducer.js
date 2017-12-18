@@ -30,7 +30,7 @@ export const INITIAL_STATE = Immutable({
   isFetching: 0,
 });
 
-const items = (state = [], action) => {
+const items = (state = INITIAL_STATE.items, action) => {
   switch (action.type) {
   case REQUEST_POSTS:
     return state;
@@ -43,7 +43,7 @@ const items = (state = [], action) => {
     return state;
   }
 };
-const isFetching = (state = 0, action) => {
+const isFetching = (state = INITIAL_STATE.isFetching, action) => {
   switch (action.type) {
   case REQUEST_POSTS:
     return state + 1;
