@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories reducer handles RECEIVE_CATEGORIES action 1`] = `
+Object {
+  "isFetching": 0,
+  "items": Array [
+    Object {
+      "name": "Nice one",
+    },
+  ],
+}
+`;
+
+exports[`Categories reducer handles REQUEST_CATEGORIES action 1`] = `
+Object {
+  "isFetching": 1,
+  "items": Array [
+    Object {
+      "name": "Nice one",
+    },
+    Object {
+      "name": "Nicer one",
+    },
+    Object {
+      "name": "Nicest one",
+    },
+  ],
+}
+`;
+
+exports[`Categories reducer returns the same state on an unhandled action 1`] = `
+Object {
+  "isFetching": 0,
+  "items": Array [],
+}
+`;
