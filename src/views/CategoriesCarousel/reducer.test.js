@@ -10,35 +10,38 @@ describe('Categories reducer', () => {
       isFetching: 0,
       items: [
         {
+          id: 1,
           name: 'Nice one',
         },
         {
+          id: 2,
           name: 'Nicer one',
-        },
-        {
-          name: 'Nicest one',
         },
       ],
     };
-
     expect(categories(categoriesList, requestCategories())).toMatchSnapshot();
   });
   it('handles RECEIVE_CATEGORIES action', () => {
-    const categoriesList = {
+    const categoriesState = {
       isFetching: 1,
       items: [
         {
+          id: 1,
           name: 'Nice one',
         },
         {
+          id: 2,
           name: 'Nicer one',
-        },
-        {
-          name: 'Nicest one',
         },
       ],
     };
-    expect(categories(categoriesList, receiveCategories(categoriesList))).toMatchSnapshot();
+    const categoriesList = [
+      {
+        id: 3,
+        name: 'Nicest one',
+      },
+    ];
+    expect(categories(categoriesState, receiveCategories(categoriesList))).toMatchSnapshot();
   });
 
   // reducer functions

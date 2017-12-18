@@ -5,7 +5,16 @@ Object {
   "isFetching": 0,
   "items": Array [
     Object {
+      "id": 1,
       "name": "Nice one",
+    },
+    Object {
+      "id": 2,
+      "name": "Nicer one",
+    },
+    Object {
+      "id": 3,
+      "name": "Nicest one",
     },
   ],
 }
@@ -16,13 +25,12 @@ Object {
   "isFetching": 1,
   "items": Array [
     Object {
+      "id": 1,
       "name": "Nice one",
     },
     Object {
+      "id": 2,
       "name": "Nicer one",
-    },
-    Object {
-      "name": "Nicest one",
     },
   ],
 }
