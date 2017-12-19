@@ -39,3 +39,5 @@ const PostCard = (props) => {
 PostCard.propTypes = {
   post: postPropType.isRequired,
 };
+
+export default PostCard;
