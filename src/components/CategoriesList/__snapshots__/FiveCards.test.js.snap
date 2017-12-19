@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Five cards should render correctly 1`] = `
+<Grid
+  className="one-third-row"
+  columns={2}
+  divided={true}
+>
+  <GridRow>
+    <GridColumn>
+      <CategoryCard
+        category={
+          Object {
+            "id": 1,
+            "name": "Some mock name",
+            "slug": "mock-slug",
+          }
+        }
+        key="0.10891770873706386"
+      />
+    </GridColumn>
+  </GridRow>
+  <GridRow>
+    <GridColumn>
+      <CategoryCard
+        category={
+          Object {
+            "id": 2,
+            "name": "Some other mock name",
+            "slug": "mock-slug",
+          }
+        }
+        key="0.6567999356541583"
+      />
+    </GridColumn>
+    <GridColumn>
+      <CategoryCard
+        category={
+          Object {
+            "id": 3,
+            "name": "Some name",
+            "slug": "mock-slug",
+          }
+        }
+        key="0.9934359151482539"
+      />
+    </GridColumn>
+  </GridRow>
+  <GridRow>
+    <GridColumn>
+      <CategoryCard
+        category={
+          Object {
+            "id": 4,
+            "name": "Mock name",
+            "slug": "mock-slug",
+          }
+        }
+        key="0.3908024946023123"
+      />
+    </GridColumn>
+    <GridColumn>
+      <CategoryCard
+        category={
+          Object {
+            "id": 5,
+            "name": "Some other other mock name",
+            "slug": "mock-slug",
+          }
+        }
+        key="0.9610344680213294"
+      />
+    </GridColumn>
+  </GridRow>
+</Grid>
+`;
