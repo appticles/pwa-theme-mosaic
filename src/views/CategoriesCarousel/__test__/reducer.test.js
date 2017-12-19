@@ -1,5 +1,5 @@
-import categories, { INITIAL_STATE, getCategories, getCategoriesFetching } from './reducer';
-import { requestCategories, receiveCategories } from './action';
+import categories, { INITIAL_STATE, getCategories, getCategoriesFetching } from '../reducer';
+import { requestCategories, receiveCategories } from '../action';
 
 describe('Categories reducer', () => {
   it('returns the same state on an unhandled action', () => {

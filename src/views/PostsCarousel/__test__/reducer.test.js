@@ -1,5 +1,5 @@
-import posts, { INITIAL_STATE, getPosts, getPostsFetching } from './reducer';
-import { requestPosts, receivePosts } from './action';
+import posts, { INITIAL_STATE, getPosts, getPostsFetching } from '../reducer';
+import { requestPosts, receivePosts } from '../action';
 
 describe('Posts reducer', () => {
   it('returns same state on an unhandled action', () => {

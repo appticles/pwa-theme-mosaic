@@ -1,5 +1,5 @@
-import pages, { INITIAL_STATE, getPages, getPagesFetching } from './reducer';
-import { requestPages, receivePages } from './action';
+import pages, { INITIAL_STATE, getPages, getPagesFetching } from '../reducer';
+import { requestPages, receivePages } from '../action';
 
 describe('Posts reducer', () => {
   it('returns same state on an unhandled action', () => {
