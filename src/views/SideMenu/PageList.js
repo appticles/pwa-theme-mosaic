@@ -89,7 +89,7 @@ class PageList extends Component {
   }
 }
 
-PageList.PropTypes = {
+PageList.propTypes = {
   pages: PropTypes.arrayOf(pagePropType).isRequired,
 };
 
