@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-import CategoryCard from './index';
+import CategoryCard from '../index';
 
 describe('Category card', () => {
   it('should render correctly', () => {
