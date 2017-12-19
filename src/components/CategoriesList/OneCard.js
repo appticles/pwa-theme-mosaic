@@ -8,7 +8,7 @@ import './style.css';
 const OneCard = props => (
   <Grid className="full-row">
     <GridRow>
-      <CategoryCard category={props.categoriesList[0]} key={Math.random()} />
+      <CategoryCard category={props.categoriesList[0]} key={props.categoriesList[0].id} />
     </GridRow>
   </Grid>
 );
