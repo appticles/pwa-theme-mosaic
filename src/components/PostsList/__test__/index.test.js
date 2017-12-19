@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-import PostsList from './index';
+import PostsList from '../index';
 
 describe('Posts list', () => {
   it('should render correctly', () => {

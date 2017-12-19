@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-import PostCard from './index';
+import PostCard from '../index';
 
 describe('Post card', () => {
   it('should render correctly', () => {

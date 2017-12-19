@@ -1,5 +1,5 @@
-import navBar, { INITIAL_STATE } from './reducer';
-import { openMenu, closeMenu } from './action';
+import navBar, { INITIAL_STATE } from '../reducer';
+import { openMenu, closeMenu } from '../action';
 
 describe('NavBar reducer', () => {
   it('returns the same state on an unhandled action', () => {
