@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid, GridRow } from 'semantic-ui-react';
 
 import { categoryPropType } from '../../views/CategoriesCarousel/reducer';
@@ -14,6 +15,6 @@ const OneCard = props => (
 );
 
 OneCard.propTypes = {
-  categoriesList: categoryPropType.isRequired,
+  categoriesList: PropTypes.arrayOf(categoryPropType).isRequired,
 };
 export default OneCard;
