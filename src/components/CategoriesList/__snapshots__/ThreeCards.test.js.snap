@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Five cards should render correctly 1`] = `
+exports[`Three cards should render correctly 1`] = `
 <Grid
-  className="one-third-row"
+  className="half-row"
   columns={2}
   divided={true}
 >
@@ -43,32 +43,6 @@ exports[`Five cards should render correctly 1`] = `
           }
         }
         key="3"
-      />
-    </GridColumn>
-  </GridRow>
-  <GridRow>
-    <GridColumn>
-      <CategoryCard
-        category={
-          Object {
-            "id": 4,
-            "name": "Mock name",
-            "slug": "mock-slug",
-          }
-        }
-        key="4"
-      />
-    </GridColumn>
-    <GridColumn>
-      <CategoryCard
-        category={
-          Object {
-            "id": 5,
-            "name": "Some other other mock name",
-            "slug": "mock-slug",
-          }
-        }
-        key="5"
       />
     </GridColumn>
   </GridRow>
