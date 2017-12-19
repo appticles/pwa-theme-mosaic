@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-import FourCards from './FourCards';
+import ThreeCards from '../ThreeCards';
 
-describe('Four cards', () => {
+describe('Three cards', () => {
   it('should render correctly', () => {
     const mockCategory = [
       {
@@ -22,13 +22,8 @@ describe('Four cards', () => {
         id: 3,
         name: 'Some name',
       },
-      {
-        slug: 'mock-slug',
-        id: 4,
-        name: 'Mock name',
-      },
     ];
-    const output = shallow(<FourCards categoriesList={mockCategory} />);
+    const output = shallow(<ThreeCards categoriesList={mockCategory} />);
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 });

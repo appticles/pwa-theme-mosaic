@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
-import CategoriesList from './index';
+import FiveCards from '../FiveCards';
 
-describe('Categories list', () => {
+describe('Five cards', () => {
   it('should render correctly', () => {
-    const mockCategoriesList = [
+    const mockCategory = [
       {
         slug: 'mock-slug',
         id: 1,
@@ -32,24 +32,8 @@ describe('Categories list', () => {
         id: 5,
         name: 'Some other other mock name',
       },
-      {
-        slug: 'mock-slug',
-        id: 6,
-        name: 'Some other other mock name',
-      },
-      {
-        slug: 'mock-slug',
-        id: 7,
-        name: 'Some other other mock name',
-      },
-      {
-        slug: 'mock-slug',
-        id: 8,
-        name: 'Some other other mock name',
-      },
     ];
-
-    const output = shallow(<CategoriesList categoriesChunk={mockCategoriesList} />);
+    const output = shallow(<FiveCards categoriesList={mockCategory} />);
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 });
