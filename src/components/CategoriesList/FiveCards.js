@@ -14,18 +14,18 @@ const FiveCards = props => (
     </GridRow>
     <GridRow>
       <GridColumn>
-        <CategoryCard category={props.categoriesList[1]} tall={1} key={Math.random()} />
+        <CategoryCard category={props.categoriesList[1]} key={Math.random()} />
       </GridColumn>
       <GridColumn>
-        <CategoryCard category={props.categoriesList[2]} tall={1} key={Math.random()} />
+        <CategoryCard category={props.categoriesList[2]} key={Math.random()} />
       </GridColumn>
     </GridRow>
     <GridRow>
       <GridColumn>
-        <CategoryCard category={props.categoriesList[3]} tall={1} key={Math.random()} />
+        <CategoryCard category={props.categoriesList[3]} key={Math.random()} />
       </GridColumn>
       <GridColumn>
-        <CategoryCard category={props.categoriesList[4]} tall={1} key={Math.random()} />
+        <CategoryCard category={props.categoriesList[4]} key={Math.random()} />
       </GridColumn>
     </GridRow>
   </Grid>

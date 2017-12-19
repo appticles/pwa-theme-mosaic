@@ -14,10 +14,10 @@ const ThreeCards = props => (
     </GridRow>
     <GridRow>
       <GridColumn>
-        <CategoryCard category={props.categoriesList[1]} tall={1} key={Math.random()} />
+        <CategoryCard category={props.categoriesList[1]} key={Math.random()} />
       </GridColumn>
       <GridColumn>
-        <CategoryCard category={props.categoriesList[2]} tall={1} key={Math.random()} />
+        <CategoryCard category={props.categoriesList[2]} key={Math.random()} />
       </GridColumn>
     </GridRow>
   </Grid>
