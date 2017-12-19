@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post card should render correctly 1`] = `
+<Link
+  replace={false}
+  to="/post/mock-slug/1"
+>
+  <Item
+    className="posts"
+  >
+    <ItemHeader>
+      <div
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Mock title",
+          }
+        }
+      />
+    </ItemHeader>
+    <ItemContent>
+      <div
+        className="image"
+        style={
+          Object {
+            "backgroundImage": "url(undefined)",
+          }
+        }
+      />
+      <ItemDescription
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Some mock exceprt to be rendered",
+          }
+        }
+      />
+    </ItemContent>
+  </Item>
+</Link>
+`;
