@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories list should render correctly 1`] = `
+<div>
+  <ThreeCards
+    categoriesList={
+      Array [
+        Object {
+          "id": 1,
+          "name": "Some mock name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 2,
+          "name": "Some other mock name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 3,
+          "name": "Some name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 4,
+          "name": "Mock name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 5,
+          "name": "Some other other mock name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 6,
+          "name": "Some other other mock name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 7,
+          "name": "Some other other mock name",
+          "slug": "mock-slug",
+        },
+        Object {
+          "id": 8,
+          "name": "Some other other mock name",
+          "slug": "mock-slug",
+        },
+      ]
+    }
+  />
+</div>
+`;
