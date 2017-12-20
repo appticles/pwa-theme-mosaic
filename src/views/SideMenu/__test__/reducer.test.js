@@ -21,7 +21,27 @@ describe('Posts reducer', () => {
     };
     expect(pages(pageState, requestPages())).toMatchSnapshot();
   });
-  it('handles RECEIVE_PAGES action', () => {
+  it('handles RECEIVE_PAGES action case 1', () => {
+    const pageState = {
+      isFetching: 1,
+      items: [
+        {
+          id: 1,
+          name: 'Nice page',
+        },
+        {
+          id: 2,
+          name: 'Nicer page',
+        },
+      ],
+    };
+    const pageList = {
+      id: 3,
+      name: 'Nicest page',
+    };
+    expect(pages(pageState, receivePages(pageList))).toMatchSnapshot();
+  });
+  it('handles RECEIVE_PAGES action case 2', () => {
     const pageState = {
       isFetching: 1,
       items: [
