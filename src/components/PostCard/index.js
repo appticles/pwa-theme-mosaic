@@ -8,8 +8,8 @@ import './style.css';
 const PostCard = (props) => {
   function getImage(sourceImg) {
     let image;
-    if (sourceImg) {
-      image = sourceImg[0].source_url;
+    if (sourceImg !== 0) {
+      image = props.post._embedded['wp:featuredmedia'][0].source_url;
       return image;
     }
     image = 'http://via.placeholder.com/177x119';
@@ -26,7 +26,7 @@ const PostCard = (props) => {
           <div
             className="image"
             style={{
-              backgroundImage: 'url(' + getImage(props.post._embedded['wp:featuredmedia']) + ')',
+              backgroundImage: 'url(' + getImage(props.post.featured_media) + ')',
             }}
           />
           <Item.Description dangerouslySetInnerHTML={{ __html: props.post.excerpt.rendered }} />
