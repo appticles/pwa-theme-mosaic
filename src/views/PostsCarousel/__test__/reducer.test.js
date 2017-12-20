@@ -21,7 +21,7 @@ describe('Posts reducer', () => {
     };
     expect(posts(postsList, requestPosts())).toMatchSnapshot();
   });
-  it('handles RECEIVE_POSTS action', () => {
+  it('handles RECEIVE_POSTS action case 1', () => {
     const postState = {
       isFetching: 1,
       items: [
@@ -41,6 +41,26 @@ describe('Posts reducer', () => {
         name: 'Nicest post',
       },
     ];
+    expect(posts(postState, receivePosts(postsList))).toMatchSnapshot();
+  });
+  it('handles RECEIVE_POSTS action case 2', () => {
+    const postState = {
+      isFetching: 1,
+      items: [
+        {
+          id: 1,
+          name: 'Nice post',
+        },
+        {
+          id: 2,
+          name: 'Nicer post',
+        },
+      ],
+    };
+    const postsList = {
+      id: 3,
+      name: 'Nicest post',
+    };
     expect(posts(postState, receivePosts(postsList))).toMatchSnapshot();
   });
 
