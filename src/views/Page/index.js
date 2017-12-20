@@ -9,7 +9,7 @@ import { getPages, pagePropType } from '../SideMenu/reducer';
 
 import PageDetails from './PageView';
 
-class Page extends Component {
+class PageView extends Component {
   componentWillMount() {
     this.readPage(this.props.match.params.pageId);
   }
@@ -35,7 +35,7 @@ class Page extends Component {
   }
 }
 
-Page.propTypes = {
+PageView.propTypes = {
   dispatch: PropTypes.func.isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
@@ -53,4 +53,4 @@ function mapDispatchToProps(dispatch) {
   return Object.assign({ dispatch }, bindActionCreators({ fetchPages }, dispatch));
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Page);
+export default connect(mapStateToProps, mapDispatchToProps)(PageView);

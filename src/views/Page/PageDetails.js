@@ -10,7 +10,7 @@ import { pagePropType } from '../SideMenu/reducer';
 import { closeMenu } from '../../components/NavBar/action';
 import './style.css';
 
-class PageView extends Component {
+class PageDetails extends Component {
   constructor(props) {
     super(props);
     this.hideSidebar = this.hideSidebar.bind(this);
@@ -58,7 +58,7 @@ class PageView extends Component {
   }
 }
 
-PageView.propTypes = {
+PageDetails.propTypes = {
   page: pagePropType.isRequired,
   sideMenuVisible: PropTypes.bool.isRequired,
   closeMenu: PropTypes.func.isRequired,
@@ -70,4 +70,4 @@ const mapStateToProps = state => ({
 function mapDispatchToProps(dispatch) {
   return Object.assign(bindActionCreators({ closeMenu }, dispatch));
 }
-export default connect(mapStateToProps, mapDispatchToProps)(PageView);
+export default connect(mapStateToProps, mapDispatchToProps)(PageDetails);
