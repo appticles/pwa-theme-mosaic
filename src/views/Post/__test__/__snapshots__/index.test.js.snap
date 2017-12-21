@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post screen should render correctly an existing post 1`] = `
+<p>
+  Post does not exist
+</p>
+`;
+
+exports[`Post screen should render correctly that a post does not exist 1`] = `
+<p>
+  Post does not exist
+</p>
+`;
