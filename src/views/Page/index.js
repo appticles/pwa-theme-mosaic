@@ -7,7 +7,7 @@ import _ from 'lodash';
 import { fetchPages } from '../SideMenu/action';
 import { getPages, pagePropType } from '../SideMenu/reducer';
 
-import PageDetails from './PageView';
+import PageDetails from './PageDetails';
 
 class PageView extends Component {
   componentWillMount() {
