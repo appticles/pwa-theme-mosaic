@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page screen renders a message if the page does not exist 1`] = `
+<p>
+  Page does not exist
+</p>
+`;
