@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import store from './configureStore';
 import registerServiceWorker from './registerServiceWorker';
-import App from './App';
 
 import CategoriesCarousel from './views/CategoriesCarousel/index';
 import PostsCarousel from './views/PostsCarousel/index';
@@ -16,7 +15,7 @@ import './index.css';
 render(
   <Provider store={store}>
     <HashRouter>
-      <App>
+      <div className="App">
         <Switch>
           <Route exact path="/" component={CategoriesCarousel} />
           <Route path="/categories" component={CategoriesCarousel} />
@@ -24,7 +23,7 @@ render(
           <Route path="/post/:postSlug/:postId" component={PostView} />
           <Route path="/page/:pageSlug/:pageId" component={PageView} />
         </Switch>
-      </App>
+      </div>
     </HashRouter>
   </Provider>,
   document.getElementById('root'),
