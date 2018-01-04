@@ -14,12 +14,6 @@ class Post extends Component {
     this.readPost(this.props.match.params.postId);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.postId !== nextProps.match.params.postId) {
-      this.readPost(nextProps.match.params.postId);
-    }
-  }
-
   readPost(postId) {
     const { dispatch } = this.props;
     dispatch(fetchPosts({ id: postId }));

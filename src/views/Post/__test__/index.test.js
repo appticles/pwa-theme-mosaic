@@ -4,6 +4,8 @@ import renderer from 'react-test-renderer';
 import mockStore from '../../../__mocks__/__mocks__redux-mock-store';
 import Post from '../index';
 
+jest.mock('../PostView', () => 'Post view test');
+
 describe('Post screen', () => {
   it('should render correctly that a post does not exist', () => {
     const store = mockStore({
@@ -44,7 +46,7 @@ describe('Post screen', () => {
       },
     });
     const match = {
-      params: { postId: 'some-post-id' },
+      params: { postId: '1' },
     };
     expect(renderer.create(<Post store={store} fetchPosts={jest.fn()} match={match} />)).toMatchSnapshot();
   });
