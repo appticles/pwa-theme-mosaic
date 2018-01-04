@@ -1,9 +1,11 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import mockStore from '../../../configureMockStore';
+import mockStore from '../../../__mocks__/__mocks__redux-mock-store';
 
 import PageView from '../index';
+
+jest.mock('../PageDetails', () => 'Page details test');
 
 describe('Page screen', () => {
   it('renders a message if the page does not exist', () => {
@@ -60,23 +62,23 @@ describe('Page screen', () => {
         ],
         isFetching: 1,
       },
-      sideMenuVisible: true,
-      page: {
-        id: 1,
-        parent: 32,
-        title: {
-          rendered: 'Some page tile',
-        },
-        slug: 'some-page-slug',
-        content: {
-          rendered: 'Some page content ot be rendered',
-        },
-        link: 'some-page-link',
-        author: 54,
-        comment_status: 'dunno',
-        featured_media: 43,
-        status: 'some-status',
-      },
+      // sideMenuVisible: true,
+      // page: {
+      //   id: 1,
+      //   parent: 32,
+      //   title: {
+      //     rendered: 'Some page tile',
+      //   },
+      //   slug: 'some-page-slug',
+      //   content: {
+      //     rendered: 'Some page content ot be rendered',
+      //   },
+      //   link: 'some-page-link',
+      //   author: 54,
+      //   comment_status: 'dunno',
+      //   featured_media: 43,
+      //   status: 'some-status',
+      // },
     });
     const match = {
       params: {

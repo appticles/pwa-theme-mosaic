@@ -5,3 +5,26 @@ exports[`Page screen renders a message if the page does not exist 1`] = `
   Page does not exist
 </p>
 `;
+
+exports[`Page screen renders existing pages 1`] = `
+<Page details test
+  page={
+    Object {
+      "author": 54,
+      "comment_status": "dunno",
+      "content": Object {
+        "rendered": "Some page content ot be rendered",
+      },
+      "featured_media": 43,
+      "id": 1,
+      "link": "some-page-link",
+      "parent": 32,
+      "slug": "some-page-slug",
+      "status": "some-status",
+      "title": Object {
+        "rendered": "Some page tile",
+      },
+    }
+  }
+/>
+`;
