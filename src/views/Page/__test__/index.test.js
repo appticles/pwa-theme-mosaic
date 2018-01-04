@@ -62,23 +62,6 @@ describe('Page screen', () => {
         ],
         isFetching: 1,
       },
-      // sideMenuVisible: true,
-      // page: {
-      //   id: 1,
-      //   parent: 32,
-      //   title: {
-      //     rendered: 'Some page tile',
-      //   },
-      //   slug: 'some-page-slug',
-      //   content: {
-      //     rendered: 'Some page content ot be rendered',
-      //   },
-      //   link: 'some-page-link',
-      //   author: 54,
-      //   comment_status: 'dunno',
-      //   featured_media: 43,
-      //   status: 'some-status',
-      // },
     });
     const match = {
       params: {
