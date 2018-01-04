@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import mockStore from '../../../configureMockStore';
+import mockStore from '../../../__mocks__/__mocks__redux-mock-store';
 
 import NavBar from '../index';
 
