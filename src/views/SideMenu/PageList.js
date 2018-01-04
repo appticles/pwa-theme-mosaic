@@ -27,8 +27,17 @@ class PageList extends Component {
     return null;
   }
 
+  checkChildren() {
+    return this.props.pages.map((item) => {
+      const children = this.props.pages.filter(child => child.parent === item.id);
+      item.children = children.length > 0;
+
+      return item;
+    });
+  }
+
   filterPages() {
-    return this.props.pages.filter(page => page.parent === this.state.parentId);
+    return this.checkChildren().filter(page => page.parent === this.state.parentId);
   }
 
   openSubmenu(parentId, parentPageTitle) {
@@ -70,7 +79,7 @@ class PageList extends Component {
                   </div>
                 </Modal>
               </List.Content>
-              {page.children.length > 0 ? (
+              {page.children ? (
                 <List.Icon
                   link
                   name="triangle right"
