@@ -14,3 +14,8 @@
 .page .ui.header .ui.icon.button {
   background: none;
 }
+
+.react-router-modal__modal {
+  width: 94%;
+  height: 98%;
+}
