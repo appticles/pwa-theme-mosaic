@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import mockStore from '../../../__mocks__/__mocks__redux-mock-store';
+import mockStore from '../../../__mocks__/redux-mock-store';
 import Post from '../index';
 
 jest.mock('../PostView', () => 'Post view test');
