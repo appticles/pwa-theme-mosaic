@@ -14,6 +14,12 @@ class PageView extends Component {
     this.readPage(this.props.match.params.pageId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.pageId !== nextProps.match.params.pageId) {
+      this.readPage(nextProps.match.params.pageId);
+    }
+  }
+
   readPage(pageId) {
     const { dispatch } = this.props;
     dispatch(fetchPages({ id: pageId }));
