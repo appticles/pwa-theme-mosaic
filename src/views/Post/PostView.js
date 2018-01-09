@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Image, Header, Label } from 'semantic-ui-react';
+import createHistory from 'history/createBrowserHistory';
+import { Container, Image, Header, Label, Icon } from 'semantic-ui-react';
 import Moment from 'react-moment';
 
 import { postPropType } from '../PostsCarousel/reducer';
@@ -10,6 +11,7 @@ const PostView = (props) => {
   const { author } = post._embedded;
   const categoriesList = post._embedded['wp:term'];
   const featuredMedia = post._embedded['wp:featuredmedia'];
+  const history = createHistory();
 
   function getImage(sourceImg) {
     let imageSource;
@@ -20,12 +22,14 @@ const PostView = (props) => {
     imageSource = 'https://placeholdit.co//i/555x650';
     return imageSource;
   }
+
   return (
     <Container className="post">
+      <Icon size="big" name="chevron left" onClick={history.goBack} />
       <Image src={getImage(featuredMedia)} />
       <Container textAlign="justified">
         {categoriesList[0].map(category => (
-          <Label color="teal" key={category}>
+          <Label color="teal" key={category.name}>
             {category.name}
           </Label>
         ))}

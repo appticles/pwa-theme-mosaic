@@ -38,6 +38,14 @@
   margin: 15px 10px -10px 0;
 }
 
+/* ICON */
+.ui.container.post i.icon {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  color: #ffffff;
+}
+
 /* FIX FOR EXTRA DIV FORM react-router-modal */
 .ui.container.post + div {
   display: none;
