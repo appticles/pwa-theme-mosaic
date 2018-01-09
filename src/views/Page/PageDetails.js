@@ -28,7 +28,7 @@ class PageDetails extends Component {
       <Container className="page">
         <Header dividing>
           <Link to="/">
-            <Button icon="close" />
+            <Button size="huge" icon="close" />
           </Link>
           <div dangerouslySetInnerHTML={{ __html: page.title.rendered }} />
         </Header>
