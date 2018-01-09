@@ -5,3 +5,8 @@ hr {
 .slick-slide {
   position: relative;
 }
+
+/* FIX FOR EXTRA DIV FROM react-router-modal */
+.slick-initialized.slick-slider + div {
+  display: none;
+}

@@ -18,10 +18,15 @@
 .post.container .sub.header {
   height: 6%;
   color: #999;
+  margin: -3% 0% 5% 7%;
 }
 .post.container .sub.header b {
   font-size: 15px;
   color: #000000;
+}
+
+.ui.justified.container {
+  height: unset;
 }
 
 .post.container .container .label {
@@ -31,4 +36,9 @@
   font-weight: 100;
   padding: 10px 5px;
   margin: 15px 10px -10px 0;
+}
+
+/* FIX FOR EXTRA DIV FORM react-router-modal */
+.ui.container.post + div {
+  display: none;
 }
