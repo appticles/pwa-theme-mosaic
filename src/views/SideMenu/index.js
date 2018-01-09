@@ -21,7 +21,7 @@ class SideMenu extends Component {
 
     return (
       <Sidebar visible={this.props.sideMenuVisible} direction="right">
-        {this.props.loading === 1 ? <Loader /> : ''}
+        {this.props.loading === 1 ? <Loader active /> : ''}
         <PageList pages={pages} />
       </Sidebar>
     );

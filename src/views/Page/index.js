@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
+import { Loader } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
 import { fetchPages } from '../SideMenu/action';
-import { getPages, pagePropType } from '../SideMenu/reducer';
+import { getPages, getPagesFetching, pagePropType } from '../SideMenu/reducer';
+
+import NotFound from '../../components/NotFound/index';
 
 import PageDetails from './PageDetails';
 
@@ -27,8 +30,13 @@ class PageView extends Component {
 
   render() {
     const page = this.props.pages.find(obj => obj.id === Number(this.props.match.params.pageId));
+
+    if (this.props.loading === 1) {
+      return <Loader active />;
+    }
+
     if (_.isNil(page)) {
-      return <p>Page does not exist</p>;
+      return <NotFound />;
     }
 
     return <PageDetails page={page} />;
@@ -43,9 +51,11 @@ PageView.propTypes = {
     }).isRequired,
   }).isRequired,
   pages: PropTypes.arrayOf(pagePropType).isRequired,
+  loading: PropTypes.number.isRequired,
 };
 
 const mapStateToProps = state => ({
+  loading: getPagesFetching(state.pages),
   pages: getPages(state.pages),
 });
 
