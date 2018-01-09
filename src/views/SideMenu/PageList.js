@@ -17,7 +17,19 @@ class PageList extends Component {
       parentId: 0,
       parentPageTitle: ['Go to'],
       visible: true,
+      pages: [],
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    // add a children property to each page - does/not have kids
+    const pages = nextProps.pages.map((item) => {
+      const children = this.props.pages.filter(child => child.parent === item.id);
+      const aux = item;
+      aux.children = children.length > 0;
+      return aux;
+    });
+    this.setState({ pages });
   }
 
   getImage(sourceImg) {
@@ -27,18 +39,8 @@ class PageList extends Component {
     return null;
   }
 
-  checkChildren() {
-    return this.props.pages.map((item) => {
-      const children = this.props.pages.filter(child => child.parent === item.id);
-      const aux = item;
-      aux.children = children.length > 0;
-
-      return aux;
-    });
-  }
-
   filterPages() {
-    return this.checkChildren().filter(page => page.parent === this.state.parentId);
+    return this.state.pages.filter(page => page.parent === this.state.parentId);
   }
 
   openSubmenu(parentId, parentPageTitle) {
