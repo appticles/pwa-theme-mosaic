@@ -26,19 +26,17 @@ class PageDetails extends Component {
 
     return (
       <Container className="page">
+        <Header dividing>
+          <Link to="/">
+            <Button icon="close" />
+          </Link>
+          <div dangerouslySetInnerHTML={{ __html: page.title.rendered }} />
+        </Header>
+        <Header.Subheader>
+          &nbsp;by&nbsp;<b>{author[0].name}</b>,&nbsp;<Moment format="MMMM DD, YYYY">{page.date}</Moment>
+        </Header.Subheader>
         {featuredMedia ? <Image src={this.getImage(featuredMedia)} /> : ''}
         <Container textAlign="justified">
-          <Header>
-            <Link to="/">
-              <Button icon="close" />
-            </Link>
-            <div dangerouslySetInnerHTML={{ __html: page.title.rendered }} />
-          </Header>
-
-          <Header.Subheader>
-            &nbsp;by&nbsp;<b>{author[0].name}</b>,&nbsp;<Moment format="MMMM DD, YYYY">{page.date}</Moment>
-          </Header.Subheader>
-
           <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} />
         </Container>
       </Container>

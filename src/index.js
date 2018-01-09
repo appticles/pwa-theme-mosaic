@@ -18,12 +18,13 @@ render(
   <Provider store={store}>
     <HashRouter>
       <div className="App">
+        <CategoriesCarousel />
         <Switch>
           <Route exact path="/" component={CategoriesCarousel} />
           <Route path="/categories" component={CategoriesCarousel} />
           <Route path="/category/:categorySlug/:categoryId" component={PostsCarousel} />
           <Route path="/post/:postSlug/:postId" component={PostView} />
-          <ModalRoute path="/page/:pageSlug/:pageId" parentPath="/" component={PageView} />
+          <ModalRoute path="/page/:pageSlug/:pageId" component={PageView} parentPath="/categories" />
         </Switch>
         <ModalContainer />
       </div>
