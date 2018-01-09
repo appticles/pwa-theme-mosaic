@@ -30,9 +30,10 @@ class PageList extends Component {
   checkChildren() {
     return this.props.pages.map((item) => {
       const children = this.props.pages.filter(child => child.parent === item.id);
-      item.children = children.length > 0;
+      const aux = item;
+      aux.children = children.length > 0;
 
-      return item;
+      return aux;
     });
   }
 
