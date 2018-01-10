@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Page screen renders a message if the page does not exist 1`] = `
-<p>
-  Page does not exist
-</p>
+<div
+  className="ui container"
+>
+  <h1
+    className="ui header"
+  >
+     Not found
+  </h1>
+</div>
 `;
 
 exports[`Page screen renders existing pages 1`] = `
@@ -26,5 +32,11 @@ exports[`Page screen renders existing pages 1`] = `
       },
     }
   }
+/>
+`;
+
+exports[`Page screen renders loader 1`] = `
+<div
+  className="ui active loader"
 />
 `;

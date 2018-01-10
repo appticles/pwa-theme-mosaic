@@ -11,6 +11,19 @@ describe('Post screen', () => {
     const store = mockStore({
       posts: {
         items: [],
+        isFetching: 0,
+      },
+    });
+    const match = {
+      params: { postId: 'some-post-id' },
+    };
+    expect(renderer.create(<Post store={store} fetchPosts={jest.fn()} match={match} />)).toMatchSnapshot();
+  });
+
+  it('should render correctly a loader', () => {
+    const store = mockStore({
+      posts: {
+        items: [],
         isFetching: 1,
       },
     });
@@ -19,6 +32,7 @@ describe('Post screen', () => {
     };
     expect(renderer.create(<Post store={store} fetchPosts={jest.fn()} match={match} />)).toMatchSnapshot();
   });
+
   it('should render correctly an existing post', () => {
     const store = mockStore({
       posts: {
@@ -42,7 +56,7 @@ describe('Post screen', () => {
             date: 'some mock date',
           },
         ],
-        isFetching: 1,
+        isFetching: 0,
       },
     });
     const match = {

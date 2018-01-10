@@ -4,6 +4,12 @@ exports[`Post card should render post with featured image 1`] = `
 <Container
   className="post"
 >
+  <Icon
+    as="i"
+    name="chevron left"
+    onClick={[Function]}
+    size="big"
+  />
   <Image
     as="img"
     ui={true}
@@ -13,19 +19,19 @@ exports[`Post card should render post with featured image 1`] = `
   >
     <Label
       color="teal"
-      key="[object Object]"
+      key="Some category"
     >
       Some category
     </Label>
     <Label
       color="teal"
-      key="[object Object]"
+      key="Some category"
     >
       Some category
     </Label>
     <Label
       color="teal"
-      key="[object Object]"
+      key="Some category"
     >
       Some category
     </Label>
@@ -73,6 +79,12 @@ exports[`Post card should render post with image placeholder 1`] = `
 <Container
   className="post"
 >
+  <Icon
+    as="i"
+    name="chevron left"
+    onClick={[Function]}
+    size="big"
+  />
   <Image
     as="img"
     src="https://placeholdit.co//i/555x650"
@@ -83,19 +95,19 @@ exports[`Post card should render post with image placeholder 1`] = `
   >
     <Label
       color="teal"
-      key="[object Object]"
+      key="Some category"
     >
       Some category
     </Label>
     <Label
       color="teal"
-      key="[object Object]"
+      key="Some category"
     >
       Some category
     </Label>
     <Label
       color="teal"
-      key="[object Object]"
+      key="Some category"
     >
       Some category
     </Label>

@@ -12,6 +12,21 @@ describe('Page screen', () => {
     const store = mockStore({
       pages: {
         items: [],
+        isFetching: 0,
+      },
+    });
+    const match = {
+      params: {
+        pageId: '1',
+      },
+    };
+    expect(renderer.create(<PageView store={store} fetchPages={jest.fn()} match={match} />)).toMatchSnapshot();
+  });
+
+  it('renders loader', () => {
+    const store = mockStore({
+      pages: {
+        items: [],
         isFetching: 1,
       },
     });
@@ -60,7 +75,7 @@ describe('Page screen', () => {
             status: 'some-status',
           },
         ],
-        isFetching: 1,
+        isFetching: 0,
       },
     });
     const match = {
